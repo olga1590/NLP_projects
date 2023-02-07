@@ -1,21 +1,27 @@
 # 2nd_team_project
-## Amazon Alexa Review Classification
-- Dataset consists of 3000 Amazon customer reviews, star ratings, date of review, variant and feedback of various amazon Alexa products like Alexa Echo, Echo dots.
-- The objectives is to discover insights into consumer reviews and perform sentiment analysis on the data
+## 1. Amazon Alexa Review Classification
+## 2. Yelp Review Classification
 
+### Objective of projects
+- Discover insights into consumer reviews and perform sentiment analysis on the data and wrangling with unbalanced dataset
+
+### My role
+Worked more that 20 hours a week as a data scientist within a team of 4 to produce visualizations of reviews using Matplotlib, Seaborn, Wordcloud and learned how to deal with unbalanced dataset.
+
+### Data
+#### Amazon Alexa dataset
 1. Amazon Alexa review dataset is very unbalanced (2893 positives review vs 257 negative reviews).
-
 2. Variation of different products of Alexa is not even and have more than 10 varieties (high cardinality).
-
 3. The review length is also different for both positive and negative reviews.
 
-4. I've trained models with alexa variation and new created features (like 'length'), but results were all overfitted. And trained with different variations of alexa. And results also were overfitted. So, I used only preprocessed text with TF-IDF vectorizer in training models.
-In this study I've trained machine learning models with regularization (class_weight = 'balanced'), then implemented balancing methods and specific algorithms from scikit-learn.imbalanced library, and at the end used Voting Classifier.
+#### Yelp dataset
+1. Yelp review dataset is also very unbalanced (3337 positives review vs 749 negative reviews or 81.7% vs 18.3%).
+2. The review length is also different for both positive and negative reviews.
 
-*** Strategies how to fitting model on imbalanced dataset:
+*** Strategies how to fitting model on imbalanced dataset that I've used:
 
 1. Penalize with parameter class_weight = 'balanced'
-2. Balancing the class before classification: from sklearn.imblearn - RandomUnderSampler, RandomOverSampler
+2. Balancing the class before classification from sklearn.imblearn: RandomUnderSampler, RandomOverSampler, SMOTE, NearMiss
 3. Use of specific balanced algorithms from imbalanced-learn:
 - BalancedRandomForestClassifier
 - EasyEnsembleClassifier,

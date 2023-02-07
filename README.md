@@ -1,4 +1,4 @@
-# 2nd_team_project
+# 2nd_team_project_NLP
 ## 1. Amazon Alexa Review Classification
 ## 2. Yelp Review Classification
 
@@ -10,7 +10,7 @@ Worked more that 20 hours a week as a data scientist within a team of 4 to produ
 
 ### Data
 #### Amazon Alexa dataset
-1. Amazon Alexa review dataset is very unbalanced (2893 positives review vs 257 negative reviews).
+1. Amazon Alexa review dataset is very unbalanced (2893 positives review vs 257 negative reviews or 91.8% vs 8.2%).
 2. Variation of different products of Alexa is not even and have more than 10 varieties (high cardinality).
 3. The review length is also different for both positive and negative reviews.
 
@@ -18,17 +18,17 @@ Worked more that 20 hours a week as a data scientist within a team of 4 to produ
 1. Yelp review dataset is also very unbalanced (3337 positives review vs 749 negative reviews or 81.7% vs 18.3%).
 2. The review length is also different for both positive and negative reviews.
 
-*** Strategies how to fitting model on imbalanced dataset that I've used:
+### Models and Tools Used
 
-1. Penalize with parameter class_weight = 'balanced'
+1. Penalizing with parameter class_weight = 'balanced'
 2. Balancing the class before classification from sklearn.imblearn: RandomUnderSampler, RandomOverSampler, SMOTE, NearMiss
-3. Use of specific balanced algorithms from imbalanced-learn:
+3. Using of specific balanced algorithms from imbalanced-learn:
 - BalancedRandomForestClassifier
 - EasyEnsembleClassifier,
 - RUSBoostClassifier
 - BalancedBaggingClassifier
 
-### Insights:
+### Results and Insights:
 - In the case of an unbalanced dataset, they do a better job of predicting models in which you can adjust parameter class_weight = 'balanced' (like Logistic Regression, some of ensemble models)
 
 - Also, you can apply strategies to balance the dataset, but the result may not always be better than if we did not change the balance

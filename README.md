@@ -41,4 +41,4 @@ But it increases the likelihood of overfitting since it replicates the minority 
 
 - And also I tested specific models from scikit-learn imbalanced library.
 
- -> In accordance with the results of the tested models, the best estimate was shown by VotingClassifier in amazon review dataset.
+ -> In accordance with the results of the tested models, the best estimate was shown by VotingClassifier in amazon review dataset and SVC(kernel = 'poly') in yelp review dataset.

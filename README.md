@@ -29,18 +29,16 @@ Worked more that 20 hours a week as a data scientist within a team of 4 to produ
 - BalancedBaggingClassifier
 
 ### Results and Insights:
-- In the case of an unbalanced dataset, they do a better job of predicting models in which you can adjust parameter class_weight = 'balanced' (like Logistic Regression, some of ensemble models)
+- In the case of an imbalanced dataset, I would choose algorithms where you can tune the class_weight = 'balanced' parameter (e.g. logistic regression, some ensemble models)
 
 - Also, you can apply strategies to balance the dataset, but the result may not always be better than if we did not change the balance
 
 - Under-sampling can help improve run time and storage problems by reducing the number of training data samples when the training data set is huge.
 
-- Under-sampling can discard potentially useful information which could be important for building rule classifiers. The sample chosen by random under-sampling may be a biased sample. And it will not be an accurate representation of the population. Thereby, resulting in inaccurate results with the actual test data set (in my case, SVC).
-
 - Over-sampling unlike under-sampling, this method leads to no information loss. Outperforms under sampling.
 
 But it increases the likelihood of overfitting since it replicates the minority class events.
 
-- And also I used specific models from scikit-learn imbalanced library. They also scored not bad.
+- And also I tested specific models from scikit-learn imbalanced library.
 
- -> In accordance with the results of the tested models, the best estimate was shown by VotingClassifier.
+ -> In accordance with the results of the tested models, the best estimate was shown by VotingClassifier in amazon review dataset.
